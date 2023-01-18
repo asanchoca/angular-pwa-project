@@ -30,5 +30,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "beers-api",
+      "urls": [
+        "https://api.punkapi.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1h",
+        "timeout": "1s",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
