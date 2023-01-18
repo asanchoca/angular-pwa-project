@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div *ngIf="beer" class="row animate__animated animate__bounce animate__fadeIn">
+        <div class="col-md-9">
+            <h1><strong>{{beer.name}}</strong></h1>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                        Show more details
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p><strong>Identifier:</strong> {{beer.id}}</p>
+                    <img src={{beer.image_url}} alt="" width="81.3" height="317.4">
+                    <p><strong>Tagline:</strong> {{beer.tagline}}</p>
+                    <p><strong>First brewed:</strong> {{beer.first_brewed}}</p>
+                    <p><strong>Description:</strong> {{beer.description}}</p>
+                    <p><strong>ABV:</strong> {{beer.abv}}%</p>
+                    <p><strong>pH:</strong> {{beer.ph}}</p>
+                    <p><strong>Attenuation level:</strong> {{beer.attenuation_level}}</p>
+                    <p><strong>Brewers tips:</strong> {{beer.brewers_tips}}</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+
+        <div class="col-md-3">
+            <a class="btn btn-danger" routerLink="/">Back</a>
+        </div>
+    </div>
+</div>

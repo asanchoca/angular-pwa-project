@@ -1,0 +1,21 @@
+<div class="loading" *ngIf="this.beersService.getLoading()">
+    <mat-spinner></mat-spinner>
+</div>
+<div class="container">
+    <h1>Beers</h1>
+    <div class="container right-aligned">
+        <button mat-icon-button (click)="changeToListView()">
+            <mat-icon>list</mat-icon>
+        </button>
+        <button mat-icon-button (click)="changeToCardView()">
+            <mat-icon>dashboard</mat-icon>
+        </button>
+    </div>
+    <div *ngIf="view">
+        <app-grid></app-grid>
+    </div>
+    <div *ngIf="!view">
+        <app-card></app-card>
+    </div>
+</div>
+

@@ -1,0 +1,12 @@
+<mat-card *ngFor="let beer of beers" class="card">
+    <a [routerLink]="['/beer', beer.id]" class="animate__animated animate__bounce animate__fadeIn">
+        <mat-card-header>
+            <mat-card-title>{{ beer.id }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+              <p>
+                {{ beer.name }}
+              </p>
+          </mat-card-content>
+    </a>
+</mat-card>
