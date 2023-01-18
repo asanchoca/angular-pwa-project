@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1674049475036,
+  "timestamp": 1674050178729,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -45,7 +45,22 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "beers-api",
+      "patterns": [
+        "https:\\/\\/api\\.punkapi\\.com\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 3600000,
+      "timeoutMs": 1000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
     "./assets/css/animate.css": "1a1f22a40beae7a4bf83ff81f7c6b8be7cfd7e59",
     "./assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
